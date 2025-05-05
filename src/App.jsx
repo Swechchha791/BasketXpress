@@ -1,35 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Navbar from "./app/Navbar/Navbar";
+import Home from "./app/Home/Home";
+import Footer from "./app/Footer/Footer";
+import Cart from "./app/Cart/Cart";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import CatSection from "./app/CategorySection/CatSection";
+import Login from "./app/Login/Login";
+import GreetingPopup from "./app/Home/GreetingPopup";
+import { useEffect, useState } from "react";
+import PaanCorner from "./app/Home/Products/PaanCorner";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const stored = JSON.parse(localStorage.getItem("user"));
+    if (stored) setUser(stored);
+  }, []);
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="min-h-screen mx-auto dark:bg-green-900 dark:text-white text-slate-600">
+        <Router>
+          <Navbar user={user} setUser={setUser} />
+          <div className="bg-lime-100 dark:bg-green-900">
+            <div className="max-w-screen-xl mx-auto">
+              <GreetingPopup />
+            </div>
+          </div>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/cat-section" element={<CatSection />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/login" element={<Login setUser={setUser} />} />
+            <Route path="/paan-corner" element={<PaanCorner />} />
+            <Route path="*" element={<h1>404 Not Found</h1>} />
+          </Routes>
+          <Footer />
+        </Router>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
