@@ -19,8 +19,8 @@ function App() {
 
   return (
     <>
-      <div className="min-h-screen mx-auto dark:bg-green-900 dark:text-white text-slate-600">
-        <Router>
+      <div className="min-h-screen mx-auto text-slate-600">
+        <Router className="max-w-screen-xl mx-auto px-4">
           <Navbar user={user} setUser={setUser} />
           <div className="bg-lime-100 dark:bg-green-900">
             <div className="max-w-screen-xl mx-auto">
