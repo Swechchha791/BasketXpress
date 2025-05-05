@@ -18,15 +18,12 @@ function App() {
   }, []);
 
   return (
-    <>
-      <div className="min-h-screen mx-auto text-slate-600">
-        <Router className="max-w-screen-xl mx-auto px-4">
-          <Navbar user={user} setUser={setUser} />
-          <div className="bg-lime-100 dark:bg-green-900">
-            <div className="max-w-screen-xl mx-auto">
-              <GreetingPopup />
-            </div>
-          </div>
+    <Router>
+      <div className="flex flex-col min-h-screen text-slate-600 bg-lime-50">
+        <Navbar user={user} setUser={setUser} />
+
+        <main className="flex-grow container mx-auto px-4">
+          <GreetingPopup />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/cat-section" element={<CatSection />} />
@@ -35,10 +32,11 @@ function App() {
             <Route path="/paan-corner" element={<PaanCorner />} />
             <Route path="*" element={<h1>404 Not Found</h1>} />
           </Routes>
-          <Footer />
-        </Router>
+        </main>
+
+        <Footer />
       </div>
-    </>
+    </Router>
   );
 }
 

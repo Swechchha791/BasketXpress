@@ -9,7 +9,7 @@ const Navbar = ({ user, setUser }) => {
 
   return (
     <nav className="sticky top-0 z-50 p-4 flex bg-lime-100 justify-between items-center text-black shadow-lg">
-      <Link to="/" className="text-3xl sm:text-md font-bold">
+      <Link to="/" className="text-md sm:text-3xl font-bold">
         Basket<span className="text-primary">Xpress</span>
       </Link>
 
@@ -41,7 +41,7 @@ const Navbar = ({ user, setUser }) => {
           </div>
         ) : (
           <button
-            className="px-4 py-2 text-xl font-semibold rounded-md transition duration-300"
+            className="px-4 py-2 text-lg font-semibold rounded-md transition duration-300"
             onClick={() => navigate("/login")}
           >
             Login
