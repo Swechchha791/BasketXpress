@@ -44,7 +44,9 @@ const Category = () => {
       {showPopup && selectedCategory && (
         <div className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50">
           <div className="bg-white p-6 rounded-lg shadow-lg text-center max-w-sm">
-            <h2 className="text-xl font-semibold mb-2">Caution!</h2>
+            <h2 className="text-2xl text-red-600 font-semibold mb-2">
+              Caution!
+            </h2>
             <p className="mb-4">
               The <strong>{selectedCategory.title}</strong> is filled with
               harmfull products for your health!
@@ -58,12 +60,12 @@ const Category = () => {
                   setShowPopup(false);
                   navigate("/cat-section");
                 }}
-                className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+                className="px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-600"
               >
                 Suggest Better
               </button>
               <button
-                className="px-4 py-2 bg-gray-300 text-black rounded hover:bg-gray-400"
+                className="px-4 py-2 bg-lime-100 text-black rounded hover:bg-gray-400"
                 onClick={handleClosePopup}
               >
                 No Thanks

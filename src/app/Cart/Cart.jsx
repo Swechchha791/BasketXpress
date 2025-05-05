@@ -18,9 +18,9 @@ const Cart = () => {
   if (cartItems.length === 0) {
     return (
       <div className="text-center mt-40 space-y-10">
-        <div className="text-3xl my-10">🛒 Cart is empty</div>
+        <div className="text-3xl">🛒 Cart is empty</div>
         <button
-          className="bg-green-500 rounded-md shadow-md px-4 py-2 font-semibold text-white mt-5 hover:scale-105 transition-transform duration-300"
+          className="bg-green-500 rounded-md shadow-md px-4 py-2 font-semibold text-white hover:scale-105 transition-transform duration-300"
           onClick={() => navigate("/")}
         >
           Go to Home

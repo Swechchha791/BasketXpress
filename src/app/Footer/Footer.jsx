@@ -21,7 +21,7 @@ const categories = [
 
 const Footer = () => {
   return (
-    <footer className="bg-lime-100 text-black px-6 py-10 shadow-inner">
+    <footer className="w-full bg-lime-100 text-black px-6 py-10 shadow-inner mt-16">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-10">
         {/* Left Side */}
         <div className="md:w-1/3">
