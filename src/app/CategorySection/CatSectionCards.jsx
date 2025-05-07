@@ -1,6 +1,6 @@
-import { useCart } from "../../../context/useCart.js";
+import { useCart } from "../../context/useCart";
 
-const ProductCard = ({ product }) => {
+const CatSectionCards = ({ product }) => {
   const { addToCart } = useCart();
 
   //   const handleAddToCart = () => {
@@ -8,7 +8,7 @@ const ProductCard = ({ product }) => {
   //   };
 
   return (
-    <div className="min-w-[200px] max-w-[200px] flex-shrink-0 border rounded-xl p-3 sm:p-4 shadow-sm bg-white cursor-pointer max-h-[320px]">
+    <div className="w-full sm:min-w-[200px] sm:max-w-[200px] border rounded-xl p-3 sm:p-4 shadow-sm bg-white cursor-pointer max-h-[320px]">
       <img
         src={product.image}
         alt={product.name}
@@ -30,4 +30,4 @@ const ProductCard = ({ product }) => {
   );
 };
 
-export default ProductCard;
+export default CatSectionCards;

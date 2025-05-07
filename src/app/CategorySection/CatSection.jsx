@@ -1,6 +1,6 @@
 import React from "react";
 import { productData } from "../../config/product.config";
-import ProductCard from "../Home/Products/ProductCart";
+import CatSectionCards from "./CatSectionCards";
 
 const CategorySection = () => {
   return (
@@ -13,7 +13,7 @@ const CategorySection = () => {
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-col-4 gap-6 justify-items-center">
               {section.products.map((product) => (
-                <ProductCard key={product.id} product={product} />
+                <CatSectionCards key={product.id} product={product} />
               ))}
             </div>
           </div>
