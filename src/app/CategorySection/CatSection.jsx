@@ -11,7 +11,7 @@ const CategorySection = () => {
             <h2 className="text-2xl font-bold mb-6 text-center sm:text-left">
               {section.category}
             </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 justify-items-center">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-col-4 gap-6 justify-items-center">
               {section.products.map((product) => (
                 <ProductCard key={product.id} product={product} />
               ))}

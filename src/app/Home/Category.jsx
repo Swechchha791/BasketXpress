@@ -24,7 +24,7 @@ const Category = () => {
 
   return (
     <div className="px-4 py-10 relative">
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-6 justify-items-center">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4 sm:gap-6 justify-items-center">
         {CATEGORY.map((item) => (
           <div
             key={item.id}

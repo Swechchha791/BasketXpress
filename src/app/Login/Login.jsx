@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Login = ({ setUser }) => {
-  const [step, setStep] = useState(1); // mobile input, Step 2 = OTP input
+  const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({ name: "", phone: "", otp: "" });
 
   const navigate = useNavigate();
@@ -15,7 +15,7 @@ const Login = ({ setUser }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // console.log("Sending OTP to:", formData.phone);
-    setStep(2); // Move to OTP input
+    setStep(2);
   };
 
   const handleOTPSubmit = (e) => {
@@ -28,7 +28,7 @@ const Login = ({ setUser }) => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="min-h-screen flex items-center justify-center">
       <form
         onSubmit={step === 1 ? handleSubmit : handleOTPSubmit}
         className="bg-white p-8 rounded-lg shadow-md w-full max-w-md"
@@ -53,7 +53,7 @@ const Login = ({ setUser }) => {
               />
             </div>
 
-            {/* Mobile Field */}
+            {/* Mobile no Field */}
             <div className="mb-4">
               <label htmlFor="phone" className="block font-medium mb-1">
                 Mobile No:
