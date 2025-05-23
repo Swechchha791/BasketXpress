@@ -4,17 +4,14 @@ BasketXpress is a modern, user-centric grocery delivery web application inspired
 # 🔑 Key Features:
 Category-Based Shopping: Users can browse an intuitive grid of categorized products, similar to Blinkit, for fast and easy navigation.
 
-⚡ Instant Greetings Feature (New):
+⚡ Instant Greetings Feature **(New)**:
 On landing, users are welcomed with a personalized greeting section, enhancing user engagement and providing a friendly first interaction.
 
-🚫 Health-Aware Prompt for “Paan Corner” (New):
+🚫 Health-Aware Prompt for “Paan Corner” **(New)**:
 When users navigate to the Paan Corner category, a caution popup is triggered that:
-
-Informs users about the potential health hazards associated with such products.
-
-Suggests healthier or alternative choices.
-
-Allows users to either proceed with a “No Thanks” button or explore better options responsibly.
+  **->** Informs users about the potential health hazards associated with such products.
+  **->** Suggests healthier or alternative choices.
+  **->** Allows users to either proceed with a “No Thanks” button or explore better options responsibly.
 
 Responsive Design: Optimized for all screen sizes using modern frontend frameworks and Tailwind CSS.
 
